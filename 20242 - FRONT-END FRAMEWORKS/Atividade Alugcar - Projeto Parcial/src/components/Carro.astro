@@ -1,0 +1,84 @@
+---
+import Image from "astro/components/Image.astro";
+
+const { name, description, dailyValue, days, image } = Astro.props;
+const totalValue = dailyValue * days;
+const imageWidth = 300; // Largura da imagem
+const imageHeight = 200; // Altura da imagem
+---
+<div class="carro-container">
+    <div class="foto">
+        <Image src={image} alt={name} width={imageWidth} height={imageHeight} />
+    </div>
+    <div class="conteudo">
+        <div class="cima">
+            <div class="nome-carro">
+                <h3>{name}</h3>
+                <p>{description}</p>
+            </div>
+            <div class="valor-diario">
+                <h4>R$ {dailyValue.toFixed(2)}</h4>
+                <p>valor diário</p>
+            </div>
+            <div class="diarias">
+                <h4>{days}</h4>
+                <p>dia(s)</p>
+            </div>
+            <div class="valor-total">
+                <h4>R$ {totalValue.toFixed(2)}</h4>
+                <p>Valor total</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .carro-container {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin: 16px;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f9f9f9;
+    }
+
+    .foto {
+        margin-bottom: 16px;
+    }
+
+    .conteudo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .cima {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h3 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #333;
+    }
+
+    p {
+        margin: 0;
+        color: #666;
+    }
+
+    .valor-diario, .diarias, .valor-total {
+        font-size: 1.2rem;
+    }
+
+    .valor-diario h4, .diarias h4, .valor-total h4 {
+        margin: 0;
+        color: #2c3e50;
+    }
+</style>

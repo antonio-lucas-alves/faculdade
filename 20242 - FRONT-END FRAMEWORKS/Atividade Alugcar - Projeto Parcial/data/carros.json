@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Toyota Corolla",
+    "description": "Sedan Médio",
+    "dailyValue": 93.0,
+    "days": 1,
+    "image": "/images/corolla.png"
+  },
+  {
+    "name": "Fiat Mobi",
+    "description": "Hatch Compacto",
+    "dailyValue": 70.0,
+    "days": 2,
+    "image": "/images/mobi.png"
+  },
+  {
+    "name": "Volkswagen Nivus",
+    "description": "SUV Compacto",
+    "dailyValue": 120.0,
+    "days": 3,
+    "image": "/images/nivus.png"
+  },
+  {
+    "name": "Chevrolet Onix",
+    "description": "Hatch Compacto",
+    "dailyValue": 85.0,
+    "days": 1,
+    "image": "/images/onix.png"
+  }
+]

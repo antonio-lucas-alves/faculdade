@@ -1,0 +1,17 @@
+---
+import cars from "../../data/carros.json";
+import Carro from "./Carro.astro"
+---
+
+<div>
+    {cars.map(car => (
+        <Carro 
+            name={car.name} 
+            description={car.description} 
+            dailyValue={car.dailyValue} 
+            days={car.days} 
+            image={car.image} 
+        />
+    ))}
+</div>
+
